@@ -39,6 +39,13 @@ jobs:
           repository: coq/platform
           path: platform
 
+      - name: Download EnVar Plugin
+        run: |
+          $ProgressPreference = 'SilentlyContinue'
+          Invoke-WebRequest -Uri "https://github.com/GsNSIS/EnVar/releases/download/v0.3.1/EnVar-Plugin.zip" -OutFile "EnVar.zip"
+          Expand-Archive -Path "EnVar.zip" -DestinationPath "C:\cygwin_LnA\platform\windows"
+          tree /f
+
       - name: Set switch name in coq platform
         shell: cmd
         # We need to output without a (windows style new line here) else bash will complain AND we rely on the fact that the file has a trailing new line.
@@ -55,12 +62,6 @@ jobs:
       - name: Run coq platform make windows
         shell: cmd
         run: platform\coq_platform_make_windows.bat -destcyg=C:\cygwin_LnA -arch=64 -extent=i -parallel=p -jobs=2 -vst=n -compcert=n -pick="${{matrix.coq-platform-pick}}" -set-switch=y
-
-      - name: Download EnVar Plugin
-        run: |
-          $ProgressPreference = 'SilentlyContinue'
-          Invoke-WebRequest -Uri "https://nsis.sourceforge.io/mediawiki/images/c/cc/EnVar.zip" -OutFile "EnVar.zip"
-          Expand-Archive -Path "EnVar.zip" -DestinationPath "C:\cygwin_LnA\platform\windows"
 
       - name: Patch installer
         shell: cmd
