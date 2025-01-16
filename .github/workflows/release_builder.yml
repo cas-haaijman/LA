@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - "v*.*.*" # Trigger only on version tags
+  workflow_dispatch:
 
 env:
   COQREGTESTING: y
@@ -54,6 +55,12 @@ jobs:
       - name: Run coq platform make windows
         shell: cmd
         run: platform\coq_platform_make_windows.bat -destcyg=C:\cygwin_LnA -arch=64 -extent=i -parallel=p -jobs=2 -vst=n -compcert=n -pick="${{matrix.coq-platform-pick}}" -set-switch=y
+
+      - name: Download EnVar Plugin
+        run: |
+          $ProgressPreference = 'SilentlyContinue'
+          Invoke-WebRequest -Uri "https://nsis.sourceforge.io/mediawiki/images/c/cc/EnVar.zip" -OutFile "EnVar.zip"
+          Expand-Archive -Path "EnVar.zip" -DestinationPath "C:\cygwin_LnA\platform\windows"
 
       - name: Patch installer
         shell: cmd
@@ -148,6 +155,7 @@ jobs:
   ###############################################################################
   release:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'workflow_dispatch' }}
     needs: [build-windows-installer, build-vsix, archive-library] # Depends on other jobs
     steps:
       - name: Download Extension Artifact
