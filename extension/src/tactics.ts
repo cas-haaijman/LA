@@ -1,7 +1,7 @@
 
 const general_tacs = ["Focus", "Unfocus", "SearchAbout", "Check", "Print", "Eval", "About", "Locate", "Proof", "Qed"];
 
-// Placeholder voor constructieve bewijzen:
+// Placeholder for constructive proofs:
 const allowed_tacs_benbco = [
     "hyp", "assumption", "exact", "imp_e", "imp_i",
     "neg_e", "neg_i", "con_e1", "con_e2", "con_i",
@@ -17,16 +17,16 @@ const allowed_tacs_benbco = [
     "KE", "EK_i", "CE", "CK",
 ].concat(general_tacs);
 
-// Placeholder voor klassieke bewijzen:
+// Placeholder for classical proofs:
 const allowed_tacs_benbcl = ["neg_e'"].concat(allowed_tacs_benbco);
 
-// Placeholder voor klassieke bewijzen plus LEM: (de default, vervangt de vroegere "benb_proof")
+// Placeholder for classical proofs plus "LEM": (this is the default, it replaces the deprecated "benb_proof")
 const allowed_tacs_benb = ["LEM"].concat(allowed_tacs_benbcl);
 
-// Placeholder die ook tauto toestaat:
+// Placeholder that in addition to the defaults allows the usage of "tauto":
 const allowed_tacs_benbta = ["tauto"].concat(allowed_tacs_benb);
 
-// Placeholder voor (structurele) inductie. EH: "Feitelijk zo'n beetje alle tactieken die ik ken zijn toegestaan."
+// Placeholder for (structural) induction. 
 const allowed_tacs_benbin = [
     "absurd", "all", "assert", "auto", "case",
     "change", "Check", "clear", "compute", "constructor",
@@ -39,10 +39,12 @@ const allowed_tacs_benbin = [
     "f_equal",
 ].concat(allowed_tacs_benbta);
 
+// Placeholder that in addition to the defaults allows the usage of "pose proof":
 const allowed_tacs_LnApose = ["pose proof"].concat(allowed_tacs_benb);
 
 // ***************************************************************
 
+type AllowList = { default: string[] } & Record<string, string[]>;
 export const allowLists = {
     default: allowed_tacs_benb,
 
@@ -52,7 +54,7 @@ export const allowLists = {
     benbta_proof: allowed_tacs_benbta,
     benbin_proof: allowed_tacs_benbin,
     lnapose_proof: allowed_tacs_LnApose,
-} as const;
+} as const satisfies AllowList;
 export type pragma = keyof typeof allowLists;
 export const pragmas = Object.keys(allowLists);
 

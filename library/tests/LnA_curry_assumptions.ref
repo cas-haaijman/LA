@@ -62,5 +62,6 @@
   a3 -> a4 -> a5 -> a6 -> a7 -> a8 -> a9 -> a10 -> a -> a -> a -> a -> a
 "test_curry_assumptions_sad"
      : string
+File "./tests/LnA_curry_assumptions.v", line 73, characters 8-31:
 The command has indeed failed with message:
 Tactic failure: (the goal is not of the proper form).

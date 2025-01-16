@@ -49,7 +49,13 @@ suite('Extension Test Suite', () => {
 
 		const stringifiedParsedResponse = JSON.parse(JSON.stringify(response));
 
+		// console.log("--------------------------------------------------------");
+		assert.equal(JSON.stringify(process.argv), "");
+		// console.log("--------------------------------------------------------");
+
+
 		assert.deepEqual(stringifiedParsedResponse, expectedResponse, `found change in ${fileName}`);
+		// assert.deepEqual(stringifiedParsedResponse, "", `found change in ${fileName}`);
 	}
 
 	const coqFileNames = fs.readdirSync(coqFilesDir);

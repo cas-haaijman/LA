@@ -113,10 +113,6 @@ Section test_exi_i.
     Lemma sad_test_exi_i : exists xQuant:X, xQuant=xQuant.
         Fail exi_i y.
     Abort.
-    (* Check "sad_test_exi_i_invalid_term".
-    Lemma sad_test_exi_i : exists xQuant:X, xQuant=xQuant.
-        Fail exi_i .
-    Abort. *)
     Check "sad_test_exi_i_not_exists".
     Lemma sad_test_exi_i_not_exists : True.
         Fail exi_i x.

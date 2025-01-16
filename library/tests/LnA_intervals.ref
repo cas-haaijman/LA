@@ -48,5 +48,6 @@
   y <= x <= z
 "test_interval_sad"
      : string
+File "./tests/LnA_intervals.v", line 58, characters 13-21:
 The command has indeed failed with message:
 Tactic failure: (the goal is not an interval).

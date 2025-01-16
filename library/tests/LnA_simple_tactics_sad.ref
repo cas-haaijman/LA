@@ -1,29 +1,36 @@
 "sad_test_con_i"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 14, characters 13-18:
 The command has indeed failed with message:
 Tactic failure: (the goal is not a conjunction).
 "sad_test_dis_i1"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 20, characters 13-19:
 The command has indeed failed with message:
 Tactic failure: (the goal is not a disjunction).
 "sad_test_dis_i2"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 24, characters 13-19:
 The command has indeed failed with message:
 Tactic failure: (the goal is not a disjunction).
 "sad_test_dis_e_H1_exists"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 30, characters 13-33:
 The command has indeed failed with message:
 Tactic failure: (the label H1 already exists).
 "sad_test_dis_e_H2_exists"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 34, characters 13-33:
 The command has indeed failed with message:
 Tactic failure: (the label H2 already exists).
 "sad_test_dis_e_not_disjunction"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 38, characters 8-30:
 The command has indeed failed with message:
 Tactic failure: (the argument is not a disjunction).
 "sad_test_imp_i_not_imp_generic"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 44, characters 8-21:
 The command has indeed failed with message:
 Tactic failure: (the goal is not an implication).
 1 goal
@@ -32,6 +39,7 @@ Tactic failure: (the goal is not an implication).
   True
 "sad_test_imp_i_not_imp_forall"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 49, characters 8-21:
 The command has indeed failed with message:
 Tactic failure: (the goal is not an implication).
 1 goal
@@ -40,6 +48,7 @@ Tactic failure: (the goal is not an implication).
   forall x0 : X, x0 = x0
 "sad_test_all_i_xNew_exists"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 56, characters 13-23:
 The command has indeed failed with message:
 Tactic failure: (the label xNew already exists).
 1 goal
@@ -49,6 +58,7 @@ Tactic failure: (the label xNew already exists).
   forall xQuant : X, xQuant = xQuant
 "sad_test_all_i_not_forall_generic"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 61, characters 8-24:
 The command has indeed failed with message:
 Tactic failure: (the goal is not a universal quantification).
 1 goal
@@ -57,6 +67,7 @@ Tactic failure: (the goal is not a universal quantification).
   True
 "sad_test_all_i_not_forall_imp"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 66, characters 8-24:
 The command has indeed failed with message:
 Tactic failure: (the goal is not a universal quantification).
 1 goal
@@ -65,31 +76,38 @@ Tactic failure: (the goal is not a universal quantification).
   a -> b
 "sad_test_all_e_wrong_instance"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 73, characters 13-44:
 The command has indeed failed with message:
 Tactic failure: (instantiating (X -> True) with x  does not match the goal
 (x = x) ).
 "sad_test_all_e_not_forall"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 77, characters 8-26:
 The command has indeed failed with message:
 Tactic failure: (the argument is not a universal quantification).
 "sad_test_eqv_i"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 83, characters 13-18:
 The command has indeed failed with message:
 Tactic failure: (the goal is not an equivalence).
 "sad_test_eqv_e1"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 89, characters 13-19:
 The command has indeed failed with message:
 Tactic failure: (the goal is not an implication).
 "sad_test_eqv_e2"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 95, characters 13-19:
 The command has indeed failed with message:
 Tactic failure: (the goal is not an implication).
 "sad_test_iff_i"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 101, characters 13-24:
 The command has indeed failed with message:
 Tactic failure: (the goal is not a bi-implication).
 "sad_test_LEM"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 107, characters 13-16:
 The command has indeed failed with message:
 Tactic failure: (the goal is not of the form A \/ ~A).
 1 goal
@@ -98,26 +116,32 @@ Tactic failure: (the goal is not of the form A \/ ~A).
   True
 "sad_test_exi_i_wrong_type"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 114, characters 13-20:
 The command has indeed failed with message:
 Tactic failure: (the type Y of y does not match the type X
  of the quantifier).
 "sad_test_exi_i_not_exists"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 122, characters 8-21:
 The command has indeed failed with message:
 Tactic failure: (the goal is not an existential quantification).
 "sad_test_exi_e_H_exists"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 128, characters 13-58:
 The command has indeed failed with message:
 Tactic failure: (the label H already exists).
 "sad_test_exi_e_xNew_exists"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 132, characters 13-58:
 The command has indeed failed with message:
 Tactic failure: (the label xNew already exists).
 "sad_test_exi_e_not_exists"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 136, characters 8-31:
 The command has indeed failed with message:
 Tactic failure: (the argument is not an existential quantification).
 "sad_test_neg_i_not_neg"
      : string
+File "./tests/LnA_simple_tactics_sad.v", line 142, characters 13-22:
 The command has indeed failed with message:
 Tactic failure: (the goal is not a negation).

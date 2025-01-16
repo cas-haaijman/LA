@@ -1,0 +1,117 @@
+
+Section 1: Demographics and Background
+    What is your role?
+        Student
+        Other
+
+    Which proof checker have you tried to use for at least one task during this course?
+        ProofWeb
+        VsCoq
+        Both
+
+    Did you use any of the proof checker outside the scope of the course?
+        Yes, just ProofWeb
+        Yes, just Rocq-LnA
+        Yes, Both
+        No
+
+    What operating system did you use?
+        Windows 10
+        Windows 11
+        Debian-based Linux distribution (e.g. Ubuntu, Linux Mint, MX Linux, etc)
+        Arch-based Linux distribution (e.g. Manjaro Linux, EndeavourOS, etc)
+        Other Linux distribution, namely: <Open ended>
+        MacOS 14 (Sonoma)
+        MacOS 15 (Sequoia)
+        Other, namely: <Open-ended>
+    
+    What was your prior level of experience using Rocq/Coq before this course?
+        Never used it
+        Used for up to 6 months
+        Used between 6 months and two years 
+        At least two years of experience
+
+Section 2: ProofWeb Evaluation (For Users of Proofweb)
+    How would you rate the usability of ProofWeb?
+        Poor
+        Neutral
+        Good
+
+    What features or aspects of ProofWeb did you find most useful?
+        <Open-ended>
+
+    Did you encounter any challenges or frustrations with ProofWeb?
+        <Open-ended>
+
+    Did ProofWeb meet your needs for use in this course?
+        Yes
+        No, I was missing: <Open-ended>
+
+    If you used ProofWeb outside this course, did it work for your needs? <optional>
+        Yes
+        No, namely
+
+Section 3: Rocq-LnA Evaluation (For Users of Rocq-LnA)
+    How would you rate the usability of Rocq-LnA?
+        Poor
+        Neutral
+        Good
+
+    What features or aspects of Rocq-LnA did you find most useful?
+        <Open-ended>
+
+    Did you encounter any challenges or frustrations with Rocq-LnA?
+        <Open-ended>
+
+    Did Rocq-LnA meet your needs for running Rocq/Coq code?
+        Yes
+        No, I was missing: <Open-ended>
+
+    If you used Rocq-LnA outside this course, did it work for your needs? <optional>
+        Yes
+        No, namely
+
+Section 3: Comparative Feedback (For Users of Both Systems)
+    Which system do you prefer overall?
+        ProofWeb
+        Rocq-LnA
+        No preference
+
+    Why do you prefer this system?
+        <Open-ended>
+
+    Which system was easier to learn (i.e., initial setup, understanding how to get started)?
+        ProofWeb
+        Rocq-LnA
+        Both were equally easy/difficult
+
+    Which system was easier to use (i.e., running code, troubleshooting, navigating features)?
+        ProofWeb
+        Rocq-LnA
+        Both were equally easy/difficult
+
+    >split up into table<
+    In terms of performance (e.g., speed, reliability, availability), how do the two systems compare?
+        ProofWeb is better
+        About the same
+        Rocq-LnA is better
+
+    Are there any features or aspects of ProofWeb you miss in Rocq-LnA?
+        <Open-ended>
+
+    Are there any features or aspects of Rocq-LnA you miss in ProofWeb?
+        <Open-ended>
+
+Section 4: General Feedback and Suggestions
+    What improvements would you suggest for Rocq-LnA?
+        <Open-ended>
+
+    Are there any additional features or tools you would like to see implemented in Rocq-LnA?
+        <Open-ended>
+
+    Is there anything else you would like to share about your experience with these systems?
+        <Open-ended>
+
+    Which system would you recommend for next year
+        ProofWeb
+        Rocq-LnA

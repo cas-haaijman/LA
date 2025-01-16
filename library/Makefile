@@ -1,4 +1,5 @@
-# This Makefile is based on the Makefile of Iris
+# This Makefile is a copy of the makefile created for the course Program Verification,
+# which is located in a private repository.
 
 # Forward most targets to Coq makefile (with some trick to make this phony)
 %: Makefile.coq phony

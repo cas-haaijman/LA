@@ -29,7 +29,8 @@
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "check-types": "tsc --noEmit",
     "lint": "eslint src",
-    "test": "vscode-test --headless"
+    "test": "vscode-test --headless",
+    "test-generate": "mocha src/test/extension.test.ts --update"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
@@ -46,7 +47,8 @@
     "npm-run-all": "^4.1.5",
     "prettier": "3.3.3",
     "typescript": "5.6.3",
-    "typescript-eslint": "^8.15.0"
+    "typescript-eslint": "^8.15.0",
+    "vsce": "^2.15.0"
   },
   "dependencies": {
     "vscode-languageclient": "^9.0.1"

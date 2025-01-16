@@ -5,7 +5,7 @@ on:
     branches:
       - "*"
     paths:
-      - "extension/**"
+      - "extension/src/**"
 
 jobs:
   test-extension:
@@ -31,4 +31,4 @@ jobs:
         run: |
           export DISPLAY=:99
           xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' npm run test
-        working-directory: ./extension # Adjust path if necessary
+        working-directory: ./extension

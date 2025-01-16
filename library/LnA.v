@@ -1,5 +1,5 @@
-From Coq Require Export Reals.
-From Coq Require Export Lra.
+Require Export Reals.
+Require Export Lra.
 
 Require Import Classical.
 
@@ -124,7 +124,7 @@ Tactic Notation "exi_i" constr(X) :=
      [exists X
      |let T := type of X in
       fail 1 "(the type" T "of" X "does not match the type" A " of the quantifier)"
-     |fail 1 "(the argument" X "is not a valid term)"]
+     ]
   | |- _ => fail "(the goal is not an existential quantification)"
   end.
 
@@ -251,7 +251,7 @@ Tactic Notation "lin_solve" :=
 
 (* --------- curry_assumptions ---------- *)
 
-Local Ltac curry_assumptions_go :=
+Ltac curry_assumptions_go :=
    lazymatch goal with
    | |- _ /\ _ -> _ =>
        let H1 := fresh in

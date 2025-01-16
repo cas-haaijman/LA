@@ -1,0 +1,69 @@
+
+Questionnaire instructions: 
+When to take this questionnaire: You are about to install the prerequisite programs, extensions and libraries made to be able to run Rocq/Coq code on Visual Studio Code. Before starting, please answer the following questions:
+
+Section 1: Before Setup
+    What is your role?
+        Student
+        Other
+    
+    What operating system will you use to set up?
+        Windows 10
+        Windows 11
+        Debian-based Linux distribution (e.g. Ubuntu, Linux Mint, MX Linux, etc)
+        Arch-based Linux distribution (e.g. Manjaro Linux, EndeavourOS, etc)
+        Other Linux distribution, namely: <Open ended>
+        MacOS 14 (Sonoma)
+        MacOS 15 (Sequoia)
+        Other, namely: <Open-ended>
+
+    What is your level of experience using Visual Studio Code?
+        Never used it
+        Used for up to 6 months
+        Used between 6 months and two years 
+        At least two years of experience
+    
+    Do you have Visual Studio Code installed?
+        <Yes/No>
+
+Next, to continue this questionnaire, please first read and complete the following steps:
+1. Download the following test file to an empty directory: (<https://github.com/logic-and-applications/rocq-lna/blob/main/extension/src/test/coq-files/benbta_yes_tauto.v>). 
+2. Start a stopwatch (e.g. using https://www.timeanddate.com/stopwatch/). You may stop the stopwatch once you are able to run the test file in and it looks similar to this image: 
+<https://github.com/logic-and-applications/rocq-lna/raw/main/images/running-vscoq.png>
+Specifically, `test is defined` must be visible in messages and there must be a red line under `intros`.
+3. Open the installation guide at https://github.com/logic-and-applications/rocq-lna?tab=readme-ov-file#installation-guide. After completing the guide answer the following questions:
+
+Section 2: After Setup
+    Were you able to see the expected output (test is defined and the red underline under intros)? If not, what went wrong?
+        Yes
+        No, namely: <Open-ended>
+
+    How long did setup take until you could run the test file correctly? Please enter the total time in minutes (e.g. '10 minutes')
+        <Open-ended> / <Time input if possible?>
+
+    How easy was it to follow the new setup instructions?
+        Difficult
+        Neutral
+        Easy
+
+    If you used Windows to set up, what installation method did you use?
+        Windows installer
+        Manually using wsl
+        Another method, namely: <Open-ended>
+
+    Were some instructions different from what you encountered? If so, please describe the differences and at which steps these occurred.
+        <Open-ended>
+
+    Did any part of the setup feel unclear or incomplete? If so, please describe what information you would have needed and at which steps, if any, these occurred.
+        <Open-ended>
+
+    Did you face any other difficulties during the setup? If so, please describe the points of friction and at which steps, if any, these occurred.
+        <Open-ended>
+
+    Do you have any suggestions on how to improve the installation guide or any other part of the setup?
+        <Open-ended>
+
+    Overall, how satisfied are you with the setup process?
+        Dissatisfied
+        Neutral
+        Satisfied
