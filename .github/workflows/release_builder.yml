@@ -61,7 +61,7 @@ jobs:
 
       - name: Run coq platform make windows
         shell: cmd
-        run: platform\coq_platform_make_windows.bat -destcyg=C:\cygwin_LnA -arch=64 -extent=i -parallel=p -jobs=2 -vst=n -compcert=n -pick="${{matrix.coq-platform-pick}}" -set-switch=y
+        run: platform\coq_platform_make_windows.bat -destcyg=C:\cygwin_LnA -arch=64 -extent=b -parallel=p -jobs=2 -vst=n -compcert=n -pick="${{matrix.coq-platform-pick}}" -set-switch=y
 
       - name: Patch installer
         shell: cmd

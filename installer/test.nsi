@@ -80,7 +80,7 @@ FunctionEnd
 Section "-CoqWinStuff" Sec_CoqWinStuff
   SetOutPath "$INSTDIR\"
 
-  ${registerExtension} "$INSTDIR\bin\coqide.exe" ".v" "Coq Script File"
+;   ${registerExtension} "$INSTDIR\bin\coqide.exe" ".v" "Coq Script File"
 
   ;Store install folder
   WriteRegStr HKCU "Software\${MY_PRODUCT}" "" $INSTDIR
@@ -108,7 +108,7 @@ Section "-CoqWinStuff" Sec_CoqWinStuff
   CreateDirectory "$SMPROGRAMS\Coq"
   ; The first shortcut set here is treated as main application by Windows 7/8.
   ; Use CoqIDE as main application
-  CreateShortCut "$SMPROGRAMS\Coq\CoqIDE.lnk" "$INSTDIR\bin\coqide.exe" "" "$INSTDIR\bin\coq.ico" 0
+;   CreateShortCut "$SMPROGRAMS\Coq\CoqIDE.lnk" "$INSTDIR\bin\coqide.exe" "" "$INSTDIR\bin\coq.ico" 0
   ; Coq shell
   CreateShortCut "$SMPROGRAMS\Coq\Coq-Shell.lnk" "%COMSPEC%" "/K $INSTDIR\coq-shell.bat" "$INSTDIR\coq-shell.ico" 0
   ; CreateShortCut "$SMPROGRAMS\Coq\Coq.lnk" "$INSTDIR\bin\coqtop.exe"
@@ -414,7 +414,7 @@ FunctionEnd
 ; if sections exist (by !ifdef <section_index_var>) to decide if the license page must be included.
 ; The section index variables are only defined after the section definitions.
 
-  !define MUI_ICON "coq.ico"
+  ; !define MUI_ICON "coq.ico"
   ;!define MUI_CUSTOMFUNCTION_GUIINIT PreselectSections
 
   !insertmacro MUI_PAGE_WELCOME
