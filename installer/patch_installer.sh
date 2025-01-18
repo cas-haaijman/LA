@@ -8,11 +8,10 @@ sed -i 's/cp source.coqide/# cp source/' '/platform/windows/create_installer_win
 sed -i 's/\(.*\)coqide/; \1coqide/' '/platform/windows/Coq.nsi'
 sed -i "s/!define MUI_ICON/; !define MUI_ICON/" '/platform/windows/Coq.nsi'
 
-# Add `!include "EnVar.nsh"\n` before the first !include 
-# to add the EnVar plugin https://nsis.sourceforge.io/EnVar_plug-in
-sed -i '0,/!include/{s/!include/!include "EnVar.nsh"\n!include/}' '/platform/windows/create_installer_windows.sh'
+# Install the EnVar plugin downloaded and unpacked in 'Download EnVar Plugin' step
+sed -i 's|rm -rf source|rm -rf source\
+rsync -a ../windows/envar/ ./nsis-3.06.1|' '/platform/windows/create_installer_windows.sh'
 
-# Use the Envar plugin to add installation dir to PATH
+# Use the EnVar plugin to add installation dir to PATH
 sed -i 's|SetOutPath "$INSTDIR\\bin\\"|SetOutPath "$INSTDIR\\bin\\"\
-  EnVar::AddToPath "$INSTDIR\\bin"\
-  EnVar::UpdateSystem|' '/platform/windows/create_installer_windows.sh'
+  EnVar::AddValue "PATH" "$INSTDIR\\bin"|' '/platform/windows/Coq.nsi'
