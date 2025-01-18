@@ -41,10 +41,9 @@ jobs:
 
       - name: Download EnVar Plugin
         run: |
-          $ProgressPreference = 'SilentlyContinue'
           Invoke-WebRequest -Uri "https://github.com/GsNSIS/EnVar/releases/download/v0.3.1/EnVar-Plugin.zip" -OutFile "EnVar.zip"
-          Expand-Archive -Path "EnVar.zip" -DestinationPath "C:\cygwin_LnA\platform\windows"
-          tree /f
+          Expand-Archive -Path "EnVar.zip" -DestinationPath "platform\windows\envar"
+          tree .
 
       - name: Set switch name in coq platform
         shell: cmd
